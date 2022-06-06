@@ -1,0 +1,8 @@
+container_type: 'byoc'  # must be built-in or byoc
+entry_point: 'inference.py'
+source_dir: 'scripts'
+instance_count: 1
+instance_type: 'ml.p2.xlarge'
+#instance_type: 'local_gpu'
+image_uri: '<account>.dkr.ecr.<region>.amazonaws.com/huggingface-ner-pytorch-inference:latest'
+training_job_name: 'bert-ner-bio-2022-06-06-15-40-05-242'

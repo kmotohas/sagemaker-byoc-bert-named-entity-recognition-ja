@@ -50,7 +50,7 @@ def test_inference(cfg: DictConfig):
         logger.fatal("container_type must be 'byoc' or 'built-in'")
         exit()
     
-    batch_job = huggingface_model.transformer(
+    batch_job = model.transformer(
         instance_count=cfg.instance_count,
         instance_type=cfg.instance_type,
         strategy='SingleRecord',

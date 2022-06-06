@@ -7,5 +7,3 @@ FROM 763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-pytorch-inference:
 ENV PATH="/opt/ml/code:${PATH}"
 COPY scripts/* /opt/ml/code/
 RUN pip install -r /opt/ml/code/requirements.txt
-
-ENTRYPOINT ["python", "/opt/ml/code/inference.py"]

@@ -1,0 +1,15 @@
+container_type: 'byoc'  # must be built-in or byoc
+entry_point: 'train.py'
+source_dir: 'scripts'
+instance_count: 1
+instance_type: 'ml.p2.xlarge'
+#image_uri: '<account>.dkr.ecr.<region>.amazonaws.com/huggingface-ner-pytorch-training:latest'
+job_name: 'bert-ner-bio'
+hyperparameters:
+  epochs: 5
+  train_batch_size: 32
+  eval_batch_size: 256
+  learning_rate : 1e-5
+  model_name: 'cl-tohoku/bert-base-japanese-whole-word-masking'
+  output_dir: '/opt/ml/checkpoints'
+  num_entity_type: 8

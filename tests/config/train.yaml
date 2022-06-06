@@ -3,7 +3,7 @@ entry_point: 'train.py'
 source_dir: 'scripts'
 instance_count: 1
 instance_type: 'ml.p2.xlarge'
-#image_uri: '<account>.dkr.ecr.<region>.amazonaws.com/huggingface-ner-pytorch-training:latest'
+image_uri: '<account>.dkr.ecr.<region>.amazonaws.com/huggingface-ner-pytorch-training:latest'
 job_name: 'bert-ner-bio'
 hyperparameters:
   epochs: 5
